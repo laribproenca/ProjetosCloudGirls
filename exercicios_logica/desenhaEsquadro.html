@@ -1,0 +1,33 @@
+<!-- esquadro.html -->
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    
+    function desenhaEsquadro(xa,ya, xc, yc, cor){
+
+    // desenha triângulo preto
+    pincel.fillStyle = cor;
+    pincel.beginPath();
+    pincel.moveTo(xa, ya);
+    pincel.lineTo(xc, yc);
+    pincel.lineTo(xa, yc);
+    pincel.fill();   
+
+    // desenha triângulo de dentro
+
+    pincel.fillStyle="white";
+    pincel.beginPath();
+    pincel.moveTo(xa+50, yc-50);
+    pincel.lineTo(xa+50, yc-225);
+    pincel.lineTo(xa+225, yc-50);
+    pincel.fill();
+
+    }
+    
+    desenhaEsquadro(50, 50, 400, 400, 'black');
+</script>

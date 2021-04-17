@@ -1,0 +1,22 @@
+<canvas width ="600" height ="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas'); // Chama o canva para a tela
+    var pincel = tela.getContext('2d'); // Pega o pincel da tela e mostra o tipo de desenho a ser construído
+        
+    pincel.fillStyle='black';    
+    pincel.beginPath(); // Inicia um caminho
+    pincel.moveTo(50, 50); // Mostra a coordenada do ponto inicial
+    pincel.lineTo(50, 400); // mostra a coordenada do próximo ponto
+    pincel.lineTo(400, 400); // mostra a coordenada do último ponto
+    pincel.fill(); // preenche triângulo
+
+    pincel.fillStyle='white';
+    pincel.beginPath(); // Inicia um caminho
+    pincel.moveTo(100, 175); // Mostra a coordenada do ponto inicial
+    pincel.lineTo(100, 350); // mostra a coordenada do próximo ponto
+    pincel.lineTo(275, 350); // mostra a coordenada do último ponto
+    pincel.fill(); // preenche triângulo
+
+</script>

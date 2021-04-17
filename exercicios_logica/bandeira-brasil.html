@@ -1,0 +1,30 @@
+<canvas width= "600" height= "400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'green'; // Escolhe a cor do retângulo da bandeira
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'yellow'; // define a cor do pincel
+    pincel.beginPath(); // mostra que vai iniciar um caminho
+    pincel.moveTo(300,50); // indica ponto inicial
+    pincel.lineTo(50,200); // faz um traço até o próximo ponto
+    pincel.lineTo(550,200); // faz um traço até o próximo ponto
+    pincel.fill(); // colore o espaço entre os pontos
+
+    //Desenho o triangulo debaixo
+    pincel.beginPath(); // mostra que vai iniciar um caminho
+    pincel.moveTo(50, 200); // indica ponto inicial
+    pincel.lineTo(300, 350); // faz um traço até o próximo ponto
+    pincel.lineTo(550, 200); // faz um traço até o próximo ponto
+    pincel.fill(); // colore o espaço entre os pontos
+
+    pincel.fillStyle = 'darkblue';
+    pincel.beginPath();//inicia caminho
+    pincel.arc(300, 200, 100, 2*3,14);//indica que quero fazer círculo
+    pincel.fill();
+
+</script>
